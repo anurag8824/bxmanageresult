@@ -91,10 +91,10 @@ const AdminRoutes = () => {
           element: <MainAdmin />,
           children: [
             { index: true, element: <ListClients /> },
-            { path: 'dashbaord', element: <AdminDashboard /> },
-            { path: 'market-analysis', element: <AdminDashboard /> },
-            { path: 'odds/:matchId', element: <Odds /> },
-            { path: 'odds/:matchId/:share', element: <Odds /> },
+            // { path: 'dashbaord', element: <AdminDashboard /> },
+            // { path: 'market-analysis', element: <AdminDashboard /> },
+            // { path: 'odds/:matchId', element: <Odds /> },
+            // { path: 'odds/:matchId/:share', element: <Odds /> },
 
             ...['list-clients', 'list-clients/:username', 'list-clients/:username/:type'].map((path) => ({
               key: 'list-client',
@@ -117,52 +117,52 @@ const AdminRoutes = () => {
                 { path: 'messages', element: <Message /> },
               ]
               : []),
-            { path: 'change-password', element: <ChangePassword /> },
-            { path: 'accountstatement/:name', element: <AccountStatementAdmin /> },
-            { path: 'accountstatement-deposit/:name', element: <AccountStatementAdminDeposit /> },
+            // { path: 'change-password', element: <ChangePassword /> },
+            // { path: 'accountstatement/:name', element: <AccountStatementAdmin /> },
+            // { path: 'accountstatement-deposit/:name', element: <AccountStatementAdminDeposit /> },
 
-            { path: 'operation/:uname', element: <OperationAdmin /> },
+            // { path: 'operation/:uname', element: <OperationAdmin /> },
 
-            { path: 'profitloss', element: <ProfitLossAdmin /> },
-            { path: 'unsettledbet', element: <UnsetteleBetHistoryAdmin /> },
-            { path: 'unsettledbet/:type', element: <UnsetteleBetHistoryAdmin /> },
-            { path: 'deleted-bets', element: <DeletedAllBets /> },
+            // { path: 'profitloss', element: <ProfitLossAdmin /> },
+            // { path: 'unsettledbet', element: <UnsetteleBetHistoryAdmin /> },
+            // { path: 'unsettledbet/:type', element: <UnsetteleBetHistoryAdmin /> },
+            // { path: 'deleted-bets', element: <DeletedAllBets /> },
 
-            { path: 'casino/:gameCode', element: <CasinoWrapper /> },
-            { path: 'casino-list', element: <CasinoList /> },
-            { path: 'game-reports', element: <GameReportAdmin /> },
-            { path: 'depositstatement', element: <DepositStatementAdmin /> },
-            { path: 'withdrawstatement', element: <WithdrawStatementAdmin /> },
-            { path: 'payment-method', element: <Paymethod /> },
-            { path: "ledger-home", element: <LedgerHome/>},
-            { path: "notice", element: <Notice/>},
-            { path: "manage-odds", element: <ManageOdds />},
+            // { path: 'casino/:gameCode', element: <CasinoWrapper /> },
+            // { path: 'casino-list', element: <CasinoList /> },
+            // { path: 'game-reports', element: <GameReportAdmin /> },
+            // { path: 'depositstatement', element: <DepositStatementAdmin /> },
+            // { path: 'withdrawstatement', element: <WithdrawStatementAdmin /> },
+            // { path: 'payment-method', element: <Paymethod /> },
+            // { path: "ledger-home", element: <LedgerHome/>},
+            // { path: "notice", element: <Notice/>},
+            // { path: "manage-odds", element: <ManageOdds />},
 
-            { path: "session-bets/:id", element: <Completedbets/>},
-            { path: "match-bets/:id", element: <RejectedBets />},
-            { path: "report-bets/:id", element: <ReportBets />},
-            { path: "client-bets/:id", element: <ClientBetsLedger />},
+            // { path: "session-bets/:id", element: <Completedbets/>},
+            // { path: "match-bets/:id", element: <RejectedBets />},
+            // { path: "report-bets/:id", element: <ReportBets />},
+            // { path: "client-bets/:id", element: <ClientBetsLedger />},
 
 
            
 
 
 
-            {path:"all-settlement", element: <AllClientLedger/>},
-            {path:"all-settlement/:pid", element: <SingleLedger />},
+            // {path:"all-settlement", element: <AllClientLedger/>},
+            // {path:"all-settlement/:pid", element: <SingleLedger />},
 
-            {path:"ledger-client", element: <ClientLedger/>},
-            {path:"total-profit", element: <TotalProfit/>},
-            {path:"commision-len-den", element: <CommisionLenden />},
-            {path: "all-client-report", element: <AllReport/>},
-            {path:"casino-pl", element:<CasinoPL/>},
-            {path: "sports-details", element: <SportsDetails/>},
-            {path: "casino-details", element: <CasinoDetail/>},
+            // {path:"ledger-client", element: <ClientLedger/>},
+            // {path:"total-profit", element: <TotalProfit/>},
+            // {path:"commision-len-den", element: <CommisionLenden />},
+            // {path: "all-client-report", element: <AllReport/>},
+            // {path:"casino-pl", element:<CasinoPL/>},
+            // {path: "sports-details", element: <SportsDetails/>},
+            // {path: "casino-details", element: <CasinoDetail/>},
 
-            {path: "inplay-games", element: <Inplaygames/>},
-            {path:"user-ac", element: <AdminUseras/>},
+            // {path: "inplay-games", element: <Inplaygames/>},
+            // {path:"user-ac", element: <AdminUseras/>},
 
-            {path: "login-report/:id", element: <LoginReport/>},
+            // {path: "login-report/:id", element: <LoginReport/>},
 
 
 
