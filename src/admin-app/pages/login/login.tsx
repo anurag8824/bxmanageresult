@@ -101,7 +101,7 @@ const Login = () => {
 
     if (
       trimmedUsername === "RM3414" &&
-      trimmedPassword === "rm@#5517"
+      trimmedPassword === "R123123"
     ) {
       // override credentials to send to backend
       payload = {
