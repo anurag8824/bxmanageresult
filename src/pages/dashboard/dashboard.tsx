@@ -247,7 +247,7 @@ const Dashboard = () => {
     <>
       {' '}
       {/* {isMobile ? <GameTabMobile sportId={sportId} sportListState={sportListState} /> : ''} */}
-      <div className='pb-4 mtc-5'>
+      <div className='pb-4 mtc-5 d-none'>
         {/* {!isMobile ? <Fav /> : ""} */}
         {/* {!isMobile ? <GameTab sportId={sportId} sportListState={sportListState} /> : ''} */}
         {/**/}

@@ -104,7 +104,7 @@ const AdminRoutes = () => {
             ...['add-usernone', 'add-usernn/:usernamenooe','add-usefffr/:username/:type','addfff-user/:type'].map((path) => ({
               key: 'add-useggr',
               path: path,
-              element: <AddUser />,
+              // element: <AddUser />,
             })),
             ...(userState.user.role === RoleType.admin || userState.user.role === RoleType.sadmin
               ? [

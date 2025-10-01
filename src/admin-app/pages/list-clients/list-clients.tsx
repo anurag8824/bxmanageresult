@@ -621,7 +621,7 @@ const ListClients = () => {
   const unnmae = useParams().username;
   return (
     <>
-      <div style={{}} className="container-fluid">
+      <div style={{}} className="container-fluid d-none">
         {/* <div className="row">
           <div className="master-balance">
             <div

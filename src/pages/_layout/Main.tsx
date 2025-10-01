@@ -105,7 +105,7 @@ const Main = () => {
         </div>
       )} */}
 
-      <Header />
+      {/* <Header /> */}
       
       <ToastContainer hideProgressBar={true} autoClose={1000} />
       <div className="main">
@@ -137,7 +137,7 @@ const Main = () => {
             <Outlet></Outlet>
         )}
       </div>
-      <Footer />
+      {/* <Footer /> */}
       {/* {welcomeState.status ? <Welcome /> : ""} */}
     </div>
   );
