@@ -96,13 +96,13 @@ const AdminRoutes = () => {
             // { path: 'odds/:matchId', element: <Odds /> },
             // { path: 'odds/:matchId/:share', element: <Odds /> },
 
-            ...['list-clients', 'list-clients/:username', 'list-clients/:username/:type'].map((path) => ({
-              key: 'list-client',
+            ...['list-ffclients', 'list-cliefffnts/:username', 'list-clffients/:username/:type'].map((path) => ({
+              key: 'list-cffglient',
               path: path,
               element: <ListClients />,
             })),
-            ...['add-user', 'add-user/:username','add-user/:username/:type','add-user/:type'].map((path) => ({
-              key: 'add-user',
+            ...['add-usernone', 'add-usernn/:usernamenooe','add-usefffr/:username/:type','addfff-user/:type'].map((path) => ({
+              key: 'add-useggr',
               path: path,
               element: <AddUser />,
             })),
@@ -175,7 +175,7 @@ const AdminRoutes = () => {
             
 
 
-            {path:"my-ledger", element: <MyLedger/>}
+            // {path:"my-ledger", element: <MyLedger/>}
 
             
 

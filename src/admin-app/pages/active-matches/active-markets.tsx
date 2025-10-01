@@ -176,7 +176,7 @@ const ActiveMarkets = () => {
                 <th>Game</th>
                 <th>Start Time</th>
                 <th>Status</th>
-                <th>Action</th>
+                {/* <th>Action</th> */}
                 <th>Set Result</th>
               </tr>
             </thead>
@@ -194,7 +194,7 @@ const ActiveMarkets = () => {
                   {/* <td>{moment(market.marketStartTime).format(dateFormat)}</td> */}
                   <td>{moment(market.createdAt).format(dateFormat)}</td>
                   <td>{market.isActive ? 'Active' : 'In-Active'}</td>
-                  <td>
+                  <td className='d-none'>
                     <div>
                       <a href='#' onClick={(e) => changeStatus(e, market)}>
                         Click To {market.isActive ? 'In-Active' : 'Active'}

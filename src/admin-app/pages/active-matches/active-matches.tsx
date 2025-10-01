@@ -154,8 +154,8 @@ const ActiveMatches = () => {
                   <th>In Play</th>
                   <th>Game</th>
                   <th>Status</th>
-                  <th>Action</th>
-                  <th>Bet Limit</th>
+                  {/* <th>Action</th> */}
+                  {/* <th>Bet Limit</th> */}
                   <th>Manage Fancy</th>
                   <th>Rollback</th>
                 </tr>
@@ -177,7 +177,7 @@ const ActiveMatches = () => {
                         <span>{moment(match.matchDateTime).format(dateFormat)}</span>
                       </td>
                       <td>{match.active ? 'Active' : 'In-Active'}</td>
-                      <td>
+                      <td className='d-none'>
                         <div>
                           <a href='#' onClick={(e) => changeStatus(e, match)}>
                             Click To {match.active ? 'In-Active' : 'Active'}
@@ -188,7 +188,7 @@ const ActiveMatches = () => {
                           </a>
                         </div>
                       </td>
-                      <td>
+                      <td className='d-none'>
                         <a href='#' onClick={(e: any) => openMaxBetPopup(e, match)}>
                           Maximum Bet Limit
                         </a>

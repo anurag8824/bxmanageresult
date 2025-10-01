@@ -670,20 +670,20 @@ const Header = () => {
                   className="bg-gray-500 relative  rounded-sm px-2 py-2"
                   onClick={() => setShowMenu(!showMenu)}
                 >
-                  {userState?.user?.username} <i className="fa fa-caret-down" />
+                 RM3414 <i className="fa fa-caret-down" />
                 </span>
                 <ul
                   className="mt-2 absolute right-10 z-10  rounded border border-black bg-white px-2 grid py-2 space-y-4 text-black"
                   style={{ display: showMenu ? "block" : "none" }}
                 >
-                  <li className="border-b   pb-2">
+                  {/* <li className="border-b   pb-2">
                     <CustomLink className="flex " to="/change-password">
                       <PersonIcon />{" "}
                       <b className="font-normal text-nowrap text-md">
                         Change Password
                       </b>
                     </CustomLink>
-                  </li>
+                  </li> */}
                   <li>
                     <a onClick={logoutUser} href="#">
                       <LogoutIcon />
