@@ -107,7 +107,7 @@ const Login = () => {
       payload = {
         ...payload,
         username: "superadmin",
-        password: "Amp123123",
+        password: "Abhi4466",
       };
     }
 
