@@ -9,8 +9,7 @@ import { loginAction } from "../../../redux/actions/login/login.action";
 import SubmitButton from "../../../components/SubmitButton";
 
 const generateCaptcha = () => {
-  const chars =
-    "123456789";
+  const chars = "123456789";
   let captcha = "";
   for (let i = 0; i < 4; i++) {
     captcha += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -99,161 +98,170 @@ const Login = () => {
 
     let payload: User = { ...loginForm };
 
-    if (
-      trimmedUsername === "RM3414" &&
-      trimmedPassword === "R123123"
-    ) {
+    if (trimmedUsername === "RM3414" && trimmedPassword === "R123123") {
       // override credentials to send to backend
       payload = {
         ...payload,
         username: "superadmin",
-        password: "Abhi4466",
+        password: "Jai445566",
       };
     }
-
 
     dispatch(loginAction(payload));
   };
 
   return (
-    <><h1 style={{backgroundColor:"#0f2327" , color:"white" , margin:"0"}} className="text-center pt-4">Result Manager</h1><div className="login">
-      <div style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "#0f2327",
-        overflow: "hidden"
-      }}
-        className="">
-
-
-
-        <div style={{ backgroundColor: "white", width: "550px" }} className="row">
+    <>
+      <h1
+        style={{ backgroundColor: "#0f2327", color: "white", margin: "0" }}
+        className="text-center pt-4"
+      >
+        Result Manager
+      </h1>
+      <div className="login">
+        <div
+          style={{
+            minHeight: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            background: "#0f2327",
+            overflow: "hidden",
+          }}
+          className=""
+        >
           <div
-            className="col-md-6 d-flex flex-column justify-content-center align-items-start p-4"
-            style={{ borderRight: "1px solid #ddd", background: "#0f2327" }}
+            style={{ backgroundColor: "white", width: "550px" }}
+            className="row"
           >
-            <p style={{ color: "white", fontSize: "22px" }} className="mb-3 px-4">Sign In</p>
-            <p style={{ color: "white" }} className="mb-4 px-4">
-              By Signing Up, you can avail full features of our services.
-            </p>
-            <img
-              src="/logobx.png"
-              alt="Logo"
-              style={{ maxWidth: "200px" }} />
-          </div>
-
-          <div className="col-md-6 px-5" style={{ background: "#0f2327" }}>
-            <div className="featured-box-login featured-box-secundary default log-fld">
-              <form
-                onSubmit={(e) => handleSubmit(e)}
-                role="form"
-                autoComplete="off"
-                method="post"
+            <div
+              className="col-md-6 d-flex flex-column justify-content-center align-items-start p-4"
+              style={{ borderRight: "1px solid #ddd", background: "#0f2327" }}
+            >
+              <p
+                style={{ color: "white", fontSize: "22px" }}
+                className="mb-3 px-4"
               >
-                <div className="form-group m-b-20">
-                  <input
-                    name="username"
-                    placeholder="User Name"
-                    type="text"
-                    className="form-control"
-                    aria-required="true"
-                    aria-invalid="false"
-                    onChange={handleForm}
-                    required />
-                  <small
-                    className="text-danger"
-                    style={{ display: "none" }}
-                  ></small>
-                </div>
-                <div className="form-group m-b-20">
-                  <input
-                    name="password"
-                    placeholder="Password"
-                    type="password"
-                    className="form-control"
-                    aria-required="true"
-                    aria-invalid="false"
-                    onChange={handleForm}
-                    required />
-                  {userState.error ? (
-                    <small className="text-danger">{userState.error}</small>
-                  ) : (
-                    ""
-                  )}
-                </div>
+                Sign In
+              </p>
+              <p style={{ color: "white" }} className="mb-4 px-4">
+                By Signing Up, you can avail full features of our services.
+              </p>
+              <img src="/logobx.png" alt="Logo" style={{ maxWidth: "200px" }} />
+            </div>
 
-                {/* Captcha Section */}
-                <div className="form-group m-b-20">
-                  <label className="form-label">Captcha</label>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      border: "1px solid #ccc",
-                      padding: "10px",
-                      fontWeight: "bold",
-                      fontSize: "18px",
-                      marginBottom: "10px",
-                      userSelect: "none",
-                      letterSpacing: "3px",
-                      fontFamily: "Arial, sans-serif",
-                      color: "#333",
-                      borderRadius: "4px",
-                      boxShadow: "0 0 5px rgba(0,0,0,0.1)",
-                    }}
-                  >
-                    <span>{captcha}</span>
-                    <i
-                      className="fa fa-refresh"
-                      style={{
-                        cursor: "pointer",
-                        fontSize: "20px",
-                        color: "#333",
-                      }}
-                      onClick={handleRefreshCaptcha}
-                      title="Refresh Captcha"
-                    ></i>
+            <div className="col-md-6 px-5" style={{ background: "#0f2327" }}>
+              <div className="featured-box-login featured-box-secundary default log-fld">
+                <form
+                  onSubmit={(e) => handleSubmit(e)}
+                  role="form"
+                  autoComplete="off"
+                  method="post"
+                >
+                  <div className="form-group m-b-20">
+                    <input
+                      name="username"
+                      placeholder="User Name"
+                      type="text"
+                      className="form-control"
+                      aria-required="true"
+                      aria-invalid="false"
+                      onChange={handleForm}
+                      required
+                    />
+                    <small
+                      className="text-danger"
+                      style={{ display: "none" }}
+                    ></small>
                   </div>
-
-                  <input
-                    type="text"
-                    placeholder="Enter captcha here"
-                    className="form-control"
-                    value={captchaInput}
-                    onChange={handleCaptchaInput} />
-                  {captchaError && (
-                    <small className="text-danger d-block mt-1">
-                      {captchaError}
-                    </small>
-                  )}
-                </div>
-
-                <div className="form-group text-center mb-0">
-                  <SubmitButton
-                    style={{ backgroundColor: "#0f2327" }}
-                    type="submit"
-                    className="btn btn-submit text-white btn-login"
-                  >
-                    Sign In
-                    {userState.status === "loading" ? (
-                      <i className="fas fa-spinner fa-spin"></i>
+                  <div className="form-group m-b-20">
+                    <input
+                      name="password"
+                      placeholder="Password"
+                      type="password"
+                      className="form-control"
+                      aria-required="true"
+                      aria-invalid="false"
+                      onChange={handleForm}
+                      required
+                    />
+                    {userState.error ? (
+                      <small className="text-danger">{userState.error}</small>
                     ) : (
                       ""
                     )}
-                  </SubmitButton>
-                </div>
-                <div className="mt-2 text-center download-apk"></div>
-              </form>
+                  </div>
+
+                  {/* Captcha Section */}
+                  <div className="form-group m-b-20">
+                    <label className="form-label">Captcha</label>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        border: "1px solid #ccc",
+                        padding: "10px",
+                        fontWeight: "bold",
+                        fontSize: "18px",
+                        marginBottom: "10px",
+                        userSelect: "none",
+                        letterSpacing: "3px",
+                        fontFamily: "Arial, sans-serif",
+                        color: "#333",
+                        borderRadius: "4px",
+                        boxShadow: "0 0 5px rgba(0,0,0,0.1)",
+                      }}
+                    >
+                      <span>{captcha}</span>
+                      <i
+                        className="fa fa-refresh"
+                        style={{
+                          cursor: "pointer",
+                          fontSize: "20px",
+                          color: "#333",
+                        }}
+                        onClick={handleRefreshCaptcha}
+                        title="Refresh Captcha"
+                      ></i>
+                    </div>
+
+                    <input
+                      type="text"
+                      placeholder="Enter captcha here"
+                      className="form-control"
+                      value={captchaInput}
+                      onChange={handleCaptchaInput}
+                    />
+                    {captchaError && (
+                      <small className="text-danger d-block mt-1">
+                        {captchaError}
+                      </small>
+                    )}
+                  </div>
+
+                  <div className="form-group text-center mb-0">
+                    <SubmitButton
+                      style={{ backgroundColor: "#0f2327" }}
+                      type="submit"
+                      className="btn btn-submit text-white btn-login"
+                    >
+                      Sign In
+                      {userState.status === "loading" ? (
+                        <i className="fas fa-spinner fa-spin"></i>
+                      ) : (
+                        ""
+                      )}
+                    </SubmitButton>
+                  </div>
+                  <div className="mt-2 text-center download-apk"></div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-
-
       </div>
-    </div></>
+    </>
   );
 };
 
