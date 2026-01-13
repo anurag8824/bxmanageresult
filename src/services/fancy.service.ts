@@ -1,7 +1,7 @@
 import api from '../utils/api'
 class FancyService {
   getActiveFancies(matchId: number | string, status: string) {
-    return api.get(`active-fancies?matchId=${matchId}&gtype=${status}`)
+    return api.get(`active-fancies-two?matchId=${matchId}&gtype=${status}`)
   }
   
   suspendFancy(marketId: number | string, matchId: number, type: 'isSuspend' | 'active') {
