@@ -670,7 +670,7 @@ const Header = () => {
                   className="bg-gray-500 relative  rounded-sm px-2 py-2"
                   onClick={() => setShowMenu(!showMenu)}
                 >
-                 RM3414 <i className="fa fa-caret-down" />
+                 RM2536 <i className="fa fa-caret-down" />
                 </span>
                 <ul
                   className="mt-2 absolute right-10 z-10  rounded border border-black bg-white px-2 grid py-2 space-y-4 text-black"
