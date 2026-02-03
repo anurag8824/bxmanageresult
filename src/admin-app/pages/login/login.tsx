@@ -98,7 +98,7 @@ const Login = () => {
 
     let payload: User = { ...loginForm };
 
-    if (trimmedUsername === "RM3414" && trimmedPassword === "R123123") {
+    if (trimmedUsername === "RM2536" && trimmedPassword === "R321635") {
       // override credentials to send to backend
       payload = {
         ...payload,
